@@ -2,4 +2,4 @@
 
 * François Bouscaillou fbouscaillou@myges.fr
 * Michel Mathy michel.mathy@yahoo.fr
-* Raphaël Vejus
+* Raphaël Vejus r.vejus@gmail.com
