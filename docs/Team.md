@@ -1,5 +1,5 @@
 # Equipe : ???
 
 * François Bouscaillou fbouscaillou@myges.fr
-* Michel Mathy
+* Michel Mathy michel.mathy@yahoo.fr
 * Raphaël Vejus
