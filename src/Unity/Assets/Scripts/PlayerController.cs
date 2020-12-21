@@ -3,12 +3,8 @@
 public class PlayerController : MonoBehaviour
 {
     public float SpeedPlayer;
+    public float RotationSpeed;
     public Transform playerTransform;
-    // Start is called before the first frame update
-    void Start()
-    {
-        Debug.Log("Instancie mon Player");
-    }
 
     // Update is called once per frame
     void Update()
@@ -21,16 +17,13 @@ public class PlayerController : MonoBehaviour
         {
             playerTransform.position += Vector3.back * Time.deltaTime * SpeedPlayer;
         }
-
         if (Input.GetKey(KeyCode.Q))
         {
-            
+            playerTransform.Rotate(0f, -1f * RotationSpeed * Time.fixedDeltaTime, 0f);
         }
-
-    }
-
-    void FixedUpdate()
-    {
-
+        if (Input.GetKey(KeyCode.D))
+        {
+            playerTransform.Rotate(0f, 1f * RotationSpeed * Time.fixedDeltaTime, 0f);
+        }
     }
 }
