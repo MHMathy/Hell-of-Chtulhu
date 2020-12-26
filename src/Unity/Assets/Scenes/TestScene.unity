@@ -524,7 +524,7 @@ MonoBehaviour:
     m_Bits: 256
   groundDistance: 0.4
   speed: 12
-  gravity: -9.81
+  gravity: -58.86
 --- !u!1 &1677586108
 GameObject:
   m_ObjectHideFlags: 0
