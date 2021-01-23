@@ -5,17 +5,26 @@ public class Gun : MonoBehaviour
     public float range = 100f;
     public float damage = 10f;
     public int fireRate = 5;
+    public int ammo = 30;
+    public float reloadTime = 2f;
     public Camera FpsCam;
     private float nextTimeToFire = 0f;
     void Update()
     {
         if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
         {
-            nextTimeToFire = Time.time + 1f / fireRate;
-            Shoot();
+            if (ammo > 0)
+            {
+                nextTimeToFire = Time.time + 1f / fireRate;
+                Shoot();
+            }
+            else
+            {
+                // reloading
+                Debug.Log("Need to reload ^^'");
+            }
         }
     }
-
     void Shoot()
     {
         RaycastHit hit;
@@ -26,6 +35,7 @@ public class Gun : MonoBehaviour
             if (target != null)
             {
                 target.takeDamage(damage);
+                --ammo;
             }
         }
     }
