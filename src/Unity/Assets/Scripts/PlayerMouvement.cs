@@ -7,6 +7,9 @@ public class PlayerMouvement : MonoBehaviour
     public LayerMask groundMask;
     public float groundDistance = 0.4f;
     public float speed = 12f;
+    public float sprintSpeed = 24f;
+    public float sprintDuration = 5f;
+    public float timeRecoverySprint = 5f;
     public float gravity = -9.81f;
     private Vector3 velocity;
     private bool isGrounded;
@@ -14,10 +17,37 @@ public class PlayerMouvement : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        // Check si on est au sol et que le gameobjet soit pas en chute libre
+        // Check si on est au sol et que le gameobjet ne soit pas en chute libre
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift) && sprintDuration > 0)
+        {
+            Debug.Log("Je sprint !");
+            Debug.Log($"il me reste {sprintDuration}");
+            speed = sprintSpeed;
+            sprintDuration -= Time.deltaTime;
+        }
+        else
+        {
+            speed = 12f;
+            Debug.Log("Je trotte ...");
+
+            if (sprintDuration <= 0)
+            {
+                if (timeRecoverySprint > 0)
+                {
+                    Debug.Log($"temps avant de recourir {timeRecoverySprint}");
+                    timeRecoverySprint -= Time.deltaTime;
+                }
+                else
+                {
+                    timeRecoverySprint = 5f;
+                    sprintDuration = 5f;
+                }
+            }
         }
 
         float x = Input.GetAxis("Horizontal");
