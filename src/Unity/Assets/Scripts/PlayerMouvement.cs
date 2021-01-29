@@ -25,21 +25,16 @@ public class PlayerMouvement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift) && sprintDuration > 0)
         {
-            Debug.Log("Je sprint !");
-            Debug.Log($"il me reste {sprintDuration}");
             speed = sprintSpeed;
             sprintDuration -= Time.deltaTime;
         }
         else
         {
             speed = 12f;
-            Debug.Log("Je trotte ...");
-
             if (sprintDuration <= 0)
             {
                 if (timeRecoverySprint > 0)
                 {
-                    Debug.Log($"temps avant de recourir {timeRecoverySprint}");
                     timeRecoverySprint -= Time.deltaTime;
                 }
                 else
