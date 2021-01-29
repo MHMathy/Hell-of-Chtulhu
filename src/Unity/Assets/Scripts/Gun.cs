@@ -21,7 +21,6 @@ public class Gun : MonoBehaviour
             else
             {
                 // reloading
-                Debug.Log("Need to reload ^^'");
             }
         }
     }
@@ -30,7 +29,6 @@ public class Gun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(FpsCam.transform.position, FpsCam.transform.forward, out hit, range))
         {
-            Debug.Log(hit.transform.name);
             Target target = hit.transform.GetComponent<Target>();
             if (target != null)
             {
