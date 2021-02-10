@@ -2,10 +2,6 @@
 
 public class OptionMenu : MonoBehaviour
 {
-    private void Start() {
-        // init options
-    }
-
     public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);

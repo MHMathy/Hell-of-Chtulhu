@@ -281,6 +281,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &597247375 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2974848581706352061, guid: c4766735f42dfd9438bff4d95e0a84e6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2974848582541282462}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &781722738
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,6 +641,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2974848583036023260, guid: c4766735f42dfd9438bff4d95e0a84e6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2974848583036023261, guid: c4766735f42dfd9438bff4d95e0a84e6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -804,10 +815,40 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7380865495805834883, guid: 72bd7fbe8cae13647a294ac43d592be9,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380865495805834883, guid: 72bd7fbe8cae13647a294ac43d592be9,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 597247375}
+    - target: {fileID: 7380865495805834883, guid: 72bd7fbe8cae13647a294ac43d592be9,
+        type: 3}
+      propertyPath: m_PixelPerfect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380865495805834883, guid: 72bd7fbe8cae13647a294ac43d592be9,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380865495805835004, guid: 72bd7fbe8cae13647a294ac43d592be9,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7380865495805835006, guid: 72bd7fbe8cae13647a294ac43d592be9,
         type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380865495805835006, guid: 72bd7fbe8cae13647a294ac43d592be9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72bd7fbe8cae13647a294ac43d592be9, type: 3}
