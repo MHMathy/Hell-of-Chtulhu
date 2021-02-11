@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public float range = 100f;
-    public float damage = 10f;
+    public readonly float range = 100f;
     public int fireRate = 5;
-    public int ammo = 30;
+    public float damage;
+    public int gunMagazine;
+    public int totalAmmo;
+    private int bulletUse = 0;
+    public int maxAmmo;
     public float reloadTime = 2f;
     public Camera FpsCam;
     private float nextTimeToFire = 0f;
@@ -13,15 +16,15 @@ public class Gun : MonoBehaviour
     {
         if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
         {
-            if (ammo > 0)
+            if (gunMagazine > 0)
             {
                 nextTimeToFire = Time.time + 1f / fireRate;
                 Shoot();
             }
-            else
-            {
-                // reloading
-            }
+        }
+        else if (Input.GetKey(KeyCode.R))
+        {
+            ReloadWeapon();
         }
     }
     void Shoot()
@@ -30,11 +33,21 @@ public class Gun : MonoBehaviour
         if (Physics.Raycast(FpsCam.transform.position, FpsCam.transform.forward, out hit, range))
         {
             Target target = hit.transform.GetComponent<Target>();
-            if (target != null)
-            {
-                target.takeDamage(damage);
-                --ammo;
-            }
+            if (target != null) { target.takeDamage(damage); }
         }
+        --gunMagazine;
+        ++bulletUse;
+    }
+
+    void ReloadWeapon()
+    {
+        if (totalAmmo >= maxAmmo)
+        {
+            gunMagazine = maxAmmo;
+        } else {
+            gunMagazine = totalAmmo;
+        }
+        totalAmmo -= bulletUse;
+        bulletUse = 0;
     }
 }
