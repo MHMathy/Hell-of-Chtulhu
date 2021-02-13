@@ -1,16 +1,26 @@
 using UnityEngine;
+using TMPro;
 
 public class Gun : MonoBehaviour
 {
     public readonly float range = 100f;
+    public int health;
     public int fireRate = 5;
     public float damage;
     public int ammo;
     public int totalAmmo;
     public int maxAmmo;
     public float reloadTime = 2f;
+    public TextMeshProUGUI AmmoUI;
+    public TextMeshProUGUI HeathUI;
     public Camera FpsCam;
     private float nextTimeToFire = 0f;
+
+    private void Start()
+    {
+        AmmoUI.text = ammo + " / " + totalAmmo;
+        HeathUI.text = health.ToString();
+    }
     void Update()
     {
         if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
@@ -35,15 +45,26 @@ public class Gun : MonoBehaviour
             if (target != null) { target.takeDamage(damage); }
         }
         --ammo;
+        AmmoUI.text = ammo + " / " + totalAmmo;
     }
 
     void ReloadWeapon()
     {
         if (ammo < maxAmmo)
         {
-            var deltaAmmo = maxAmmo - ammo;
+            int deltaAmmo;
+            if (totalAmmo <= 0)
+            {
+                totalAmmo = 0;
+                deltaAmmo = 0;
+            }
+            else
+            {
+                deltaAmmo = maxAmmo - ammo;
+                totalAmmo -= deltaAmmo;
+            }
             ammo += deltaAmmo;
-            totalAmmo -= deltaAmmo;
         }
+        AmmoUI.text = ammo + " / " + totalAmmo;
     }
 }
