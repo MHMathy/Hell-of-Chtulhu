@@ -44,7 +44,9 @@ public class Gun : MonoBehaviour
         if (totalAmmo >= maxAmmo)
         {
             gunMagazine = maxAmmo;
-        } else {
+        }
+        else
+        {
             gunMagazine = totalAmmo;
         }
         totalAmmo -= bulletUse;
