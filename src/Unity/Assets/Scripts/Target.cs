@@ -13,9 +13,6 @@ public class Target : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
-        if (OnEnemyKilled != null)
-        {
-            OnEnemyKilled();
-        }
+        if (OnEnemyKilled != null) { OnEnemyKilled(); }
     }
 }

@@ -640,6 +640,11 @@ PrefabInstance:
       propertyPath: maxAmmo
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 2974848582725918029, guid: c4766735f42dfd9438bff4d95e0a84e6,
+        type: 3}
+      propertyPath: ammo
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2974848583036023260, guid: c4766735f42dfd9438bff4d95e0a84e6,
         type: 3}
       propertyPath: m_Name
