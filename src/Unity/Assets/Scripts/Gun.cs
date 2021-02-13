@@ -5,9 +5,8 @@ public class Gun : MonoBehaviour
     public readonly float range = 100f;
     public int fireRate = 5;
     public float damage;
-    public int gunMagazine;
+    public int ammo;
     public int totalAmmo;
-    private int bulletUse = 0;
     public int maxAmmo;
     public float reloadTime = 2f;
     public Camera FpsCam;
@@ -16,13 +15,13 @@ public class Gun : MonoBehaviour
     {
         if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
         {
-            if (gunMagazine > 0)
+            if (ammo > 0)
             {
                 nextTimeToFire = Time.time + 1f / fireRate;
                 Shoot();
             }
         }
-        else if (Input.GetKey(KeyCode.R))
+        else if (Input.GetKeyDown(KeyCode.R))
         {
             ReloadWeapon();
         }
@@ -35,21 +34,16 @@ public class Gun : MonoBehaviour
             Target target = hit.transform.GetComponent<Target>();
             if (target != null) { target.takeDamage(damage); }
         }
-        --gunMagazine;
-        ++bulletUse;
+        --ammo;
     }
 
     void ReloadWeapon()
     {
-        if (totalAmmo >= maxAmmo)
+        if (ammo < maxAmmo)
         {
-            gunMagazine = maxAmmo;
+            var deltaAmmo = maxAmmo - ammo;
+            ammo += deltaAmmo;
+            totalAmmo -= deltaAmmo;
         }
-        else
-        {
-            gunMagazine = totalAmmo;
-        }
-        totalAmmo -= bulletUse;
-        bulletUse = 0;
     }
 }
