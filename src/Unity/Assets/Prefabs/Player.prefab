@@ -8,9 +8,18 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< refs/remotes/MHMathy/main
   - component: {fileID: 6816371987863348254}
   m_Layer: 5
   m_Name: GameOverMenu
+=======
+  - component: {fileID: 2974848581706352063}
+  - component: {fileID: 2974848581706352061}
+  - component: {fileID: 2974848581706352060}
+  - component: {fileID: 2974848581706352058}
+  m_Layer: 9
+  m_Name: Camera
+>>>>>>> Debut IA Ennemie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,11 +189,17 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< refs/remotes/MHMathy/main
   - component: {fileID: 3731223304471476555}
   - component: {fileID: 4411748635835600472}
   - component: {fileID: 702148460005149712}
   m_Layer: 5
   m_Name: StatusAmmo
+=======
+  - component: {fileID: 2974848582074527614}
+  m_Layer: 9
+  m_Name: GroundCheck
+>>>>>>> Debut IA Ennemie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -313,6 +328,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< refs/remotes/MHMathy/main
   - component: {fileID: 2211818232635851275}
   - component: {fileID: 1186414851783710512}
   - component: {fileID: 420971222914184179}
@@ -320,6 +336,14 @@ GameObject:
   - component: {fileID: 5078510107972088990}
   m_Layer: 0
   m_Name: EventSystem
+=======
+  - component: {fileID: 2974848582725918028}
+  - component: {fileID: 2974848582725918026}
+  - component: {fileID: 2974848582725918027}
+  - component: {fileID: 2974848582725918029}
+  m_Layer: 9
+  m_Name: Gun
+>>>>>>> Debut IA Ennemie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -385,6 +409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4baafa97a58e1d44c938672bfe2f11fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< refs/remotes/MHMathy/main
   pauseMenu: {fileID: 7614396099567866505}
 --- !u!114 &5078510107972088990
 MonoBehaviour:
@@ -403,6 +428,15 @@ MonoBehaviour:
   textUI: {fileID: 4786926953872801963}
   timeUI: {fileID: 4093727952465111281}
 --- !u!1 &2406451581315779547
+=======
+  range: 100
+  damage: 10
+  fireRate: 5
+  ammo: 30
+  reloadTime: 2
+  FpsCam: {fileID: 2974848581706352061}
+--- !u!1 &2974848583036023260
+>>>>>>> Debut IA Ennemie
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -410,12 +444,20 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< refs/remotes/MHMathy/main
   - component: {fileID: 7138119938190177700}
   - component: {fileID: 2733030155393152199}
   - component: {fileID: 3035573183538040079}
   - component: {fileID: 7366264525552004866}
   m_Layer: 5
   m_Name: BtnExit
+=======
+  - component: {fileID: 2974848583036023261}
+  - component: {fileID: 2974848583036023258}
+  - component: {fileID: 2974848583036023259}
+  m_Layer: 9
+  m_Name: Player
+>>>>>>> Debut IA Ennemie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -490,6 +532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< refs/remotes/MHMathy/main
   m_Navigation:
     m_Mode: 0
     m_SelectOnUp: {fileID: 0}
@@ -533,6 +576,20 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &2437031146547211816
+=======
+  controller: {fileID: 2974848583036023258}
+  groundCheck: {fileID: 2974848582074527614}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 256
+  groundDistance: 0.4
+  speed: 12
+  sprintSpeed: 24
+  sprintDuration: 5
+  timeRecoverySprint: 5
+  gravity: -58.86
+--- !u!1 &2974848583419761225
+>>>>>>> Debut IA Ennemie
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -540,12 +597,20 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< refs/remotes/MHMathy/main
   - component: {fileID: 1416981086848843682}
   - component: {fileID: 5685363420760814386}
   - component: {fileID: 7754207511936231192}
   - component: {fileID: 8807784356021821026}
   m_Layer: 5
   m_Name: BtnMenu
+=======
+  - component: {fileID: 2974848583419761222}
+  - component: {fileID: 2974848583419761220}
+  - component: {fileID: 2974848583419761223}
+  m_Layer: 9
+  m_Name: Body
+>>>>>>> Debut IA Ennemie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

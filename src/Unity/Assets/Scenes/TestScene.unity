@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 886c30cbd56ec384da9a27748d132b5d, type: 2}
 --- !u!1001 &52369340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -243,7 +243,11 @@ Transform:
   m_GameObject: {fileID: 781722738}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+<<<<<<< refs/remotes/MHMathy/main
   m_LocalScale: {x: 113.765, y: 0.21955, z: 101.909996}
+=======
+  m_LocalScale: {x: 100, y: 0.4391, z: 100}
+>>>>>>> Debut IA Ennemie
   m_Children: []
   m_Father: {fileID: 946804392}
   m_RootOrder: 0
@@ -315,6 +319,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 946804392}
     m_Modifications:
+    - target: {fileID: 4611341545531144723, guid: e3d2fdc9763c19a42bb8813024e1a92e,
+        type: 3}
+      propertyPath: sightRange
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5314184667442715012, guid: e3d2fdc9763c19a42bb8813024e1a92e,
         type: 3}
       propertyPath: m_Name
@@ -612,13 +621,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2755758829145654341, guid: c4766735f42dfd9438bff4d95e0a84e6,
         type: 3}
+<<<<<<< refs/remotes/MHMathy/main
       propertyPath: m_LocalPosition.z
       value: 0
+=======
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2974848583036023261, guid: c4766735f42dfd9438bff4d95e0a84e6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -41.3
+>>>>>>> Debut IA Ennemie
       objectReference: {fileID: 0}
     - target: {fileID: 2974848582725918028, guid: c4766735f42dfd9438bff4d95e0a84e6,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< refs/remotes/MHMathy/main
       value: 0.938
+=======
+      value: -44.6
+>>>>>>> Debut IA Ennemie
       objectReference: {fileID: 0}
     - target: {fileID: 2974848582725918029, guid: c4766735f42dfd9438bff4d95e0a84e6,
         type: 3}
