@@ -4,5 +4,5 @@
 - var : `camelCase`
 - const : `MAJ`
 - class : `OcamlCase`
-- string : ''
-- long string with var : ""
+- char : ''
+- long string with var : $""
