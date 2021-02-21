@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6816371987863348254}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: GameOverMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 7766339121287703936}
   - component: {fileID: 2496361011451649340}
   - component: {fileID: 4685835391010153851}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 3731223304471476555}
   - component: {fileID: 4411748635835600472}
   - component: {fileID: 702148460005149712}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: StatusAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 420971222914184179}
   - component: {fileID: 7878900688106572195}
   - component: {fileID: 5078510107972088990}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -399,7 +399,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  timeElapsed: 0
   textUI: {fileID: 4786926953872801963}
   timeUI: {fileID: 4093727952465111281}
 --- !u!1 &2406451581315779547
@@ -414,7 +413,7 @@ GameObject:
   - component: {fileID: 2733030155393152199}
   - component: {fileID: 3035573183538040079}
   - component: {fileID: 7366264525552004866}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: BtnExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -544,7 +543,7 @@ GameObject:
   - component: {fileID: 5685363420760814386}
   - component: {fileID: 7754207511936231192}
   - component: {fileID: 8807784356021821026}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: BtnMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -673,7 +672,7 @@ GameObject:
   - component: {fileID: 2674931189340231600}
   - component: {fileID: 3659104487939331461}
   - component: {fileID: 4644591642695182740}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -807,7 +806,7 @@ GameObject:
   - component: {fileID: 6698819320542934333}
   - component: {fileID: 5365877170088916092}
   - component: {fileID: 3242490227986837201}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -911,7 +910,7 @@ GameObject:
   - component: {fileID: 891114570344057478}
   - component: {fileID: 8696696218964533931}
   - component: {fileID: 3467073546972833274}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Crosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -985,7 +984,7 @@ GameObject:
   - component: {fileID: 4958656191284723677}
   - component: {fileID: 8672063824110717873}
   - component: {fileID: 4093727952465111281}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: TimeElapsed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1119,7 +1118,7 @@ GameObject:
   - component: {fileID: 2974848581706352061}
   - component: {fileID: 2974848581706352060}
   - component: {fileID: 2974848581706352058}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1215,7 +1214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2974848582074527614}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
@@ -1248,7 +1247,7 @@ GameObject:
   - component: {fileID: 2974848582725918026}
   - component: {fileID: 2974848582725918027}
   - component: {fileID: 2974848582725918029}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
@@ -1328,15 +1327,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47bcd361c68071f4490f7c397f8051be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  fireRate: 5
+  range: 100
   damage: 10
-  ammo: 0
-  totalAmmo: 120
-  maxAmmo: 150
+  fireRate: 5
+  ammo: 50
   reloadTime: 2
-  AmmoUI: {fileID: 702148460005149712}
-  HeathUI: {fileID: 1951861408765712283}
   FpsCam: {fileID: 2974848581706352061}
 --- !u!1 &2974848583036023260
 GameObject:
@@ -1349,9 +1344,10 @@ GameObject:
   - component: {fileID: 2974848583036023261}
   - component: {fileID: 2974848583036023258}
   - component: {fileID: 2974848583036023259}
-  m_Layer: 0
+  - component: {fileID: 650975246651054707}
+  m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1416,6 +1412,22 @@ MonoBehaviour:
   sprintDuration: 5
   timeRecoverySprint: 5
   gravity: -58.86
+--- !u!114 &650975246651054707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2974848583036023260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0f1c8349e9d9143b9705c9ae3ef37b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxhealth: 100
+  currentHealth: 0
+  playerTransform: {fileID: 0}
+  toBeCleanedTransforms: []
 --- !u!1 &2974848583419761225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,7 +1439,7 @@ GameObject:
   - component: {fileID: 2974848583419761222}
   - component: {fileID: 2974848583419761220}
   - component: {fileID: 2974848583419761223}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1507,7 +1519,7 @@ GameObject:
   - component: {fileID: 7230793194268173286}
   - component: {fileID: 4247968958323552624}
   - component: {fileID: 7654158289618678619}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: BtnOption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1636,7 +1648,7 @@ GameObject:
   - component: {fileID: 6332209004934939571}
   - component: {fileID: 2164655475153669831}
   - component: {fileID: 4802137579122130323}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1770,7 +1782,7 @@ GameObject:
   - component: {fileID: 9068333627481292292}
   - component: {fileID: 4356845326971145772}
   - component: {fileID: 8289417773266804144}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: BtnResume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1899,7 +1911,7 @@ GameObject:
   - component: {fileID: 3161602544819040381}
   - component: {fileID: 5864784228003736396}
   - component: {fileID: 1951861408765712283}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: StatusHeath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2032,7 +2044,7 @@ GameObject:
   - component: {fileID: 1199788714748662338}
   - component: {fileID: 1170547018264322021}
   - component: {fileID: 1441281484866792159}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2165,7 +2177,7 @@ GameObject:
   - component: {fileID: 3445717160644899918}
   - component: {fileID: 316256499238558845}
   - component: {fileID: 7303304468151861977}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2299,7 +2311,7 @@ GameObject:
   - component: {fileID: 5652556951952554930}
   - component: {fileID: 8141475848810233912}
   - component: {fileID: 7684692355278303862}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: BtnExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2417,7 +2429,7 @@ GameObject:
   - component: {fileID: 2031882551947583569}
   - component: {fileID: 2895180195259171921}
   - component: {fileID: 5909581139906058821}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2551,7 +2563,7 @@ GameObject:
   - component: {fileID: 8295784998986987212}
   - component: {fileID: 6338522295316869038}
   - component: {fileID: 2482254196869098462}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: BtnRetry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2669,7 +2681,7 @@ GameObject:
   - component: {fileID: 6026108278644001482}
   - component: {fileID: 659431501933123138}
   - component: {fileID: 5898479538408571016}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2747,7 +2759,7 @@ GameObject:
   - component: {fileID: 1177004311134744362}
   - component: {fileID: 5917176209606590644}
   - component: {fileID: 4786926953872801963}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
