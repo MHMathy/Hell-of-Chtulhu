@@ -13,7 +13,7 @@ public class Target : MonoBehaviour
             Die();
         }
     }
-    private void Die()
+    void Die()
     {
         Destroy(gameObject);
         if (OnEnemyKilled != null)
