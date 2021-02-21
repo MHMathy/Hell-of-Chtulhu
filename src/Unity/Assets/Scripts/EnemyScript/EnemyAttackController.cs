@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 
@@ -36,7 +35,7 @@ namespace EnemyScript
         
             if (_targetInAttackRange)
             {
-                //Debug.Log("attack");
+                Debug.Log("attack");
                 Attacking();
             }
         }
@@ -66,7 +65,5 @@ namespace EnemyScript
             alreadyAttacked = false;
         }
 
-       
-        
     }
 }
