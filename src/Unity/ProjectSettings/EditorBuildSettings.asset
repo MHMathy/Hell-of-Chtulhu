@@ -11,7 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestScene.unity
     guid: 3608eab2daf7a48408c09923215ab28e
-  - enabled: 1
-    path: Assets/Scenes/SimpleMouvTuto.unity
-    guid: 740b60ac54fac4c4f913270c434fc406
   m_configObjects: {}

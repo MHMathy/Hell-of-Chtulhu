@@ -1,26 +1,14 @@
 using UnityEngine;
-using TMPro;
 
 public class Gun : MonoBehaviour
 {
-    public readonly float range = 100f;
-    public int health;
+    public float range = 100f;
+    public float damage = 10f;
     public int fireRate = 5;
-    public float damage;
-    public int ammo;
-    public int totalAmmo;
-    public int maxAmmo;
+    public int ammo = 30;
     public float reloadTime = 2f;
-    public TextMeshProUGUI AmmoUI;
-    public TextMeshProUGUI HeathUI;
     public Camera FpsCam;
     private float nextTimeToFire = 0f;
-
-    private void Start()
-    {
-        AmmoUI.text = ammo + " / " + totalAmmo;
-        HeathUI.text = health.ToString();
-    }
     void Update()
     {
         if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
@@ -30,10 +18,10 @@ public class Gun : MonoBehaviour
                 nextTimeToFire = Time.time + 1f / fireRate;
                 Shoot();
             }
-        }
-        else if (Input.GetKeyDown(KeyCode.R))
-        {
-            ReloadWeapon();
+            else
+            {
+                // reloading
+            }
         }
     }
     void Shoot()
@@ -42,29 +30,11 @@ public class Gun : MonoBehaviour
         if (Physics.Raycast(FpsCam.transform.position, FpsCam.transform.forward, out hit, range))
         {
             Target target = hit.transform.GetComponent<Target>();
-            if (target != null) { target.takeDamage(damage); }
-        }
-        --ammo;
-        AmmoUI.text = ammo + " / " + totalAmmo;
-    }
-
-    void ReloadWeapon()
-    {
-        if (ammo < maxAmmo)
-        {
-            int deltaAmmo;
-            if (totalAmmo <= 0)
+            if (target != null)
             {
-                totalAmmo = 0;
-                deltaAmmo = 0;
+                target.takeDamage(damage);
+                --ammo;
             }
-            else
-            {
-                deltaAmmo = maxAmmo - ammo;
-                totalAmmo -= deltaAmmo;
-            }
-            ammo += deltaAmmo;
         }
-        AmmoUI.text = ammo + " / " + totalAmmo;
     }
 }
