@@ -50,14 +50,18 @@ public class Gun : MonoBehaviour
 
     void ReloadWeapon()
     {
-        if (ammo != maxAmmo)
+        if (ammo < maxAmmo)
         {
-            int deltaAmmo = maxAmmo - ammo;
-            totalAmmo -= deltaAmmo;
-            if (totalAmmo < 0)
+            int deltaAmmo;
+            if (totalAmmo <= 0)
             {
-                deltaAmmo += totalAmmo;
                 totalAmmo = 0;
+                deltaAmmo = 0;
+            }
+            else
+            {
+                deltaAmmo = maxAmmo - ammo;
+                totalAmmo -= deltaAmmo;
             }
             ammo += deltaAmmo;
         }

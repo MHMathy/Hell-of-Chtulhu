@@ -911,7 +911,7 @@ PrefabInstance:
     - target: {fileID: 1177004311134744362, guid: c4766735f42dfd9438bff4d95e0a84e6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2755758829145654341, guid: c4766735f42dfd9438bff4d95e0a84e6,
         type: 3}
@@ -931,7 +931,7 @@ PrefabInstance:
     - target: {fileID: 2974848582725918029, guid: c4766735f42dfd9438bff4d95e0a84e6,
         type: 3}
       propertyPath: totalAmmo
-      value: 30
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2974848582725918029, guid: c4766735f42dfd9438bff4d95e0a84e6,
         type: 3}
@@ -1001,7 +1001,7 @@ PrefabInstance:
     - target: {fileID: 3161602544819040381, guid: c4766735f42dfd9438bff4d95e0a84e6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6026108278644001482, guid: c4766735f42dfd9438bff4d95e0a84e6,
         type: 3}
