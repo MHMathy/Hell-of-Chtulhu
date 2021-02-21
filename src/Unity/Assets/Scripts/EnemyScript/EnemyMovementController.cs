@@ -36,17 +36,17 @@ namespace EnemyScript
         void Update()
         {
             _targetIsInSight = Physics.CheckSphere(enemyTransform.position, sightRange, 1<<9);
-            Debug.Log("in sight"+_targetIsInSight);
+            //Debug.Log("in sight"+_targetIsInSight);
         
             if (!_targetIsInSight && _canMove)
             {
-                Debug.Log("patrol");
+                //Debug.Log("patrol");
                 Patrolling();
             }
         
             if (_targetIsInSight && _canMove)
             {
-                Debug.Log("chase");
+                //Debug.Log("chase");
                 ChaseTarget();
             }
         }
@@ -65,7 +65,7 @@ namespace EnemyScript
 
         private void SearchWalkPoint()
         {
-            Debug.Log("searchWalk");
+            //Debug.Log("searchWalk");
             for (var i = 0; i < 100; i++)
             {
                 float randomZ = Random.Range(-maxPatrolRange,maxPatrolRange);
