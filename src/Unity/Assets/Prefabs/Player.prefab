@@ -1327,11 +1327,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47bcd361c68071f4490f7c397f8051be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 100
+  health: 100
+  fireRate: 20
   damage: 10
-  fireRate: 5
-  ammo: 50
+  ammo: 30
+  totalAmmo: 1000
+  maxAmmo: 30
   reloadTime: 2
+  AmmoUI: {fileID: 0}
+  HeathUI: {fileID: 0}
   FpsCam: {fileID: 2974848581706352061}
 --- !u!1 &2974848583036023260
 GameObject:
