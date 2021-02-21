@@ -254,7 +254,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8170322998386621523}
   - component: {fileID: 4611341545531144723}
-  - component: {fileID: 9121138436603287172}
   m_Layer: 0
   m_Name: ControllerScript
   m_TagString: Untagged
@@ -292,21 +291,3 @@ MonoBehaviour:
   enemyTransform: {fileID: 5948973439784378854}
   maxPatrolRange: 10
   sightRange: 2
---- !u!114 &9121138436603287172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8295696201504316815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fff60709e2ee2d241a8a472de442b95a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 7018774415046408001}
-  enemyTransform: {fileID: 5948973439784378854}
-  projectile: {fileID: 1051949816600110019, guid: e4690bb134a94714f8e56134a21fd272,
-    type: 3}
-  attackRange: 10
-  timeBetweenAttack: 1
