@@ -30,10 +30,29 @@ public class Gun : MonoBehaviour
         if (Physics.Raycast(FpsCam.transform.position, FpsCam.transform.forward, out hit, range))
         {
             Target target = hit.transform.GetComponent<Target>();
+<<<<<<< HEAD
             if (target != null)
             {
                 target.takeDamage(damage);
                 --ammo;
+=======
+            if (target != null) { target.takeDamage(damage); }
+        }
+        --ammo;
+        AmmoUI.text = ammo + " / " + totalAmmo;
+    }
+
+    void ReloadWeapon()
+    {
+        if (ammo != maxAmmo)
+        {
+            int deltaAmmo = maxAmmo - ammo;
+            totalAmmo -= deltaAmmo;
+            if (totalAmmo < 0)
+            {
+                deltaAmmo += totalAmmo;
+                totalAmmo = 0;
+>>>>>>> e7d8db80a646fca2c0dd37e9183415e9e02f11f3
             }
         }
     }
