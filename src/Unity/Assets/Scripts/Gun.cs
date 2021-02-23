@@ -17,6 +17,7 @@ public class Gun : MonoBehaviour
 
     private void Start()
     {
+        Cursor.visible = false;
         AmmoUI.text = ammo + " / " + totalAmmo;
     }
 
